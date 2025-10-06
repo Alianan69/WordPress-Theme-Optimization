@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress ENFOLD Theme Redesign & UX Optimization</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#57b5e7',
+                        secondary: '#8dd3c7'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Modern%20website%20design%20workspace%20with%20clean%20desktop%20setup%20showing%20responsive%20web%20layouts%20on%20multiple%20screens%20professional%20office%20environment%20with%20soft%20natural%20lighting%20minimalist%20aesthetic%20white%20and%20blue%20color%20scheme%20high%20quality%20photography&width=1920&height=1080&seq=hero001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(87,181,231,0.1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="font-['Pacifico'] text-2xl text-primary">logo</div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+                    Get Started
+                </button>
+                <button class="md:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#" class="block py-2 text-gray-700">Home</a>
+                <a href="#" class="block py-2 text-gray-700">Services</a>
+                <a href="#" class="block py-2 text-gray-700">Portfolio</a>
+                <a href="#" class="block py-2 text-gray-700">About</a>
+                <a href="#" class="block py-2 text-gray-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-bg min-h-screen flex items-center">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        WordPress ENFOLD Theme<br>
+                        <span class="text-primary">Redesign & UX Optimization</span>
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Transform your complex WordPress site into a user-friendly experience with flawless mobile responsiveness, intuitive navigation, and engaging visual content that converts visitors instantly.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-blue-600 transition-colors text-lg font-semibold whitespace-nowrap">
+                            Request Sample Page
+                        </button>
+                        <button class="border-2 border-primary text-primary px-8 py-4 !rounded-button hover:bg-primary hover:text-white transition-colors text-lg font-semibold whitespace-nowrap">
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Comprehensive ENFOLD Redesign Services</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        From template redesign to mobile optimization, we deliver complete WordPress solutions that prioritize user experience and conversion.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mb-6">
+                            <i class="ri-layout-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Page Template Redesign</h3>
+                        <p class="text-gray-600 mb-6">
+                            Complete overhaul of all 70 pages using ENFOLD's Layout Builder, ensuring consistent design and optimal user experience across your entire site.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors">Learn More →</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-xl mb-6">
+                            <i class="ri-smartphone-line text-2xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Mobile UX Optimization</h3>
+                        <p class="text-gray-600 mb-6">
+                            Flawless mobile responsiveness with intuitive navigation, ensuring no information is more than three clicks away on any device.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors">Learn More →</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-yellow-100 rounded-xl mb-6">
+                            <i class="ri-image-line text-2xl text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Visual Content Creation</h3>
+                        <p class="text-gray-600 mb-6">
+                            Custom infographics and interactive charts that transform complex ideas into engaging visuals, complete with source files for future updates.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Project Scope Breakdown</h2>
+                    <p class="text-xl text-gray-600">
+                        A systematic approach to transforming your WordPress site
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+                            <i class="ri-file-text-line text-3xl text-primary"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-primary mb-2">70</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pages Redesigned</h3>
+                        <p class="text-gray-600">Complete template overhaul using ENFOLD Layout Builder</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 flex items-center justify-center bg-secondary/10 rounded-full mx-auto mb-6">
+                            <i class="ri-article-line text-3xl text-secondary"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-secondary mb-2">150</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Blog Posts Optimized</h3>
+                        <p class="text-gray-600">Enhanced readability and mobile responsiveness</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 flex items-center justify-center bg-yellow-100 rounded-full mx-auto mb-6">
+                            <i class="ri-puzzle-line text-3xl text-yellow-600"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-yellow-600 mb-2">20</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Plugins Integrated</h3>
+                        <p class="text-gray-600">Seamless functionality across all features</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 flex items-center justify-center bg-red-100 rounded-full mx-auto mb-6">
+                            <i class="ri-form-line text-3xl text-red-500"></i>
+                        </div>
+                        <div class="text-4xl font-bold text-red-500 mb-2">Full</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">WPForms Setup</h3>
+                        <p class="text-gray-600">Enhanced form functionality and user experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Comprehensive Deliverables</h2>
+                    <p class="text-xl text-gray-600">
+                        Everything you need for a successful website transformation
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex flex-col md:flex-row items-start gap-6 bg-white p-8 rounded-xl shadow-sm">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl flex-shrink-0">
+                            <span class="text-2xl font-bold text-primary">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Fully Rebuilt Website</h3>
+                            <p class="text-gray-600 text-lg">
+                                Complete reconstruction covering all existing pages and posts with enhanced user experience, mobile responsiveness, and optimized navigation structure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start gap-6 bg-white p-8 rounded-xl shadow-sm">
+                        <div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-xl flex-shrink-0">
+                            <span class="text-2xl font-bold text-secondary">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Custom Graphics Package</h3>
+                            <p class="text-gray-600 text-lg">
+                                Comprehensive collection of bespoke infographics in SVG/PNG formats, plus source files for future modifications and brand consistency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start gap-6 bg-white p-8 rounded-xl shadow-sm">
+                        <div class="w-16 h-16 flex items-center justify-center bg-yellow-100 rounded-xl flex-shrink-0">
+                            <span class="text-2xl font-bold text-yellow-600">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Hand-off Documentation</h3>
+                            <p class="text-gray-600 text-lg">
+                                Detailed documentation and training materials for your content team, ensuring smooth ongoing management and updates.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-start gap-6 bg-white p-8 rounded-xl shadow-sm">
+                        <div class="w-16 h-16 flex items-center justify-center bg-red-100 rounded-xl flex-shrink-0">
+                            <span class="text-2xl font-bold text-red-500">4</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Style Sample Page</h3>
+                            <p class="text-gray-600 text-lg">
+                                One randomly selected page redesigned as a comprehensive style sample, demonstrating the full transformation before project rollout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">ENFOLD Portfolio Showcase</h2>
+                    <p class="text-xl text-gray-600">
+                        Previous projects highlighting mobile UX and visual storytelling excellence
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Modern%20responsive%20website%20design%20showcase%20on%20desktop%20and%20mobile%20devices%20clean%20professional%20layout%20with%20excellent%20user%20interface%20elements%20high%20quality%20web%20design%20portfolio%20piece%20minimalist%20aesthetic&width=400&height=300&seq=portfolio001&orientation=landscape" 
+                                 alt="Portfolio Project 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-white text-center">
+                                    <h4 class="text-xl font-semibold mb-2">E-commerce Platform</h4>
+                                    <p class="text-sm">Mobile-first redesign with 40% conversion increase</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">TechCorp Solutions</h3>
+                        <p class="text-gray-600">Complete ENFOLD redesign focusing on mobile UX and lead generation</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Professional%20business%20website%20layout%20with%20clean%20navigation%20and%20modern%20design%20elements%20showcasing%20excellent%20user%20experience%20and%20visual%20hierarchy%20corporate%20web%20design%20portfolio&width=400&height=300&seq=portfolio002&orientation=landscape" 
+                                 alt="Portfolio Project 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-white text-center">
+                                    <h4 class="text-xl font-semibold mb-2">Healthcare Portal</h4>
+                                    <p class="text-sm">Intuitive patient experience with streamlined booking</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">MedCenter Pro</h3>
+                        <p class="text-gray-600">Patient-focused design with enhanced accessibility and mobile optimization</p>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=Creative%20agency%20website%20design%20with%20stunning%20visual%20storytelling%20elements%20interactive%20portfolio%20showcase%20modern%20web%20design%20with%20engaging%20user%20interface%20creative%20digital%20experience&width=400&height=300&seq=portfolio003&orientation=landscape" 
+                                 alt="Portfolio Project 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-yellow-500/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-white text-center">
+                                    <h4 class="text-xl font-semibold mb-2">Creative Agency</h4>
+                                    <p class="text-sm">Visual storytelling with interactive portfolio elements</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Design Studio X</h3>
+                        <p class="text-gray-600">Creative showcase with custom animations and engaging visual narratives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Proven Process</h2>
+                    <p class="text-xl text-gray-600">
+                        From analysis to delivery, every step focused on exceptional results
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20 hidden lg:block"></div>
+                    <div class="space-y-12">
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-1/2 lg:text-right">
+                                <div class="bg-white p-8 rounded-xl shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">1. Comprehensive Audit</h3>
+                                    <p class="text-gray-600">
+                                        Thorough analysis of your current site, identifying UX pain points, mobile issues, and optimization opportunities across all 70 pages and 150 blog posts.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full text-white text-xl font-bold flex-shrink-0 relative z-10">
+                                1
+                            </div>
+                            <div class="lg:w-1/2"></div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-1/2"></div>
+                            <div class="w-16 h-16 flex items-center justify-center bg-secondary rounded-full text-white text-xl font-bold flex-shrink-0 relative z-10">
+                                2
+                            </div>
+                            <div class="lg:w-1/2">
+                                <div class="bg-white p-8 rounded-xl shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">2. Design & Planning</h3>
+                                    <p class="text-gray-600">
+                                        Creation of wireframes, user journey maps, and visual designs that prioritize mobile-first experience while maintaining ENFOLD's flexibility and your brand identity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-1/2 lg:text-right">
+                                <div class="bg-white p-8 rounded-xl shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">3. Development & Testing</h3>
+                                    <p class="text-gray-600">
+                                        Implementation using ENFOLD's Layout Builder, rigorous testing across devices, and creation of custom infographics that enhance user understanding and engagement.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w-16 h-16 flex items-center justify-center bg-yellow-500 rounded-full text-white text-xl font-bold flex-shrink-0 relative z-10">
+                                3
+                            </div>
+                            <div class="lg:w-1/2"></div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center gap-8">
+                            <div class="lg:w-1/2"></div>
+                            <div class="w-16 h-16 flex items-center justify-center bg-red-500 rounded-full text-white text-xl font-bold flex-shrink-0 relative z-10">
+                                4
+                            </div>
+                            <div class="lg:w-1/2">
+                                <div class="bg-white p-8 rounded-xl shadow-sm">
+                                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">4. Launch & Handoff</h3>
+                                    <p class="text-gray-600">
+                                        Final deployment with comprehensive documentation, team training, and ongoing support to ensure your content team can effectively manage the new system.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-primary">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your WordPress Site?</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    Let's start with a sample page to showcase the transformation. After three decades of collaboration, I believe in fair pay, prompt feedback, and building long-term relationships.
+                </p>
+                <div class="bg-white p-8 rounded-xl max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Request Your Sample Page</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="email" placeholder="Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <input type="url" placeholder="Current Website URL" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <textarea placeholder="Tell us about your specific goals and challenges..." rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"></textarea>
+                        <button type="submit" class="w-full bg-primary text-white py-4 !rounded-button hover:bg-blue-600 transition-colors text-lg font-semibold whitespace-nowrap">
+                            Request Sample Page & Portfolio Access
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-['Pacifico'] text-2xl text-primary mb-4">logo</div>
+                    <p class="text-gray-400 mb-4">
+                        Specializing in WordPress ENFOLD theme redesigns that prioritize user experience and mobile optimization.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">ENFOLD Redesign</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile Optimization</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">UX Consulting</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Visual Content</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <i class="ri-mail-line"></i>
+                            hello@example.com
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="ri-phone-line"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="ri-map-pin-line"></i>
+                            San Francisco, CA
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 WordPress ENFOLD Specialists. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobile-menu-toggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="form-handling">
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                
+                console.log('Form submitted:', data);
+                
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.textContent = 'Thank you! We\'ll be in touch soon.';
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        form.reset();
+                    }, 3000);
+                }, 2000);
+            });
+        });
+    </script>
+
+    <script id="smooth-scrolling">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+
+</script>
+</body>
+</html>
